@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Expense Manager</title>
+<link rel="stylesheet" href="main.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+<h1>💰 Smart Expense Manager</h1>
+<button id="themeToggle">🌙</button>
+</header>
+
+<div class="container">
+
+<!-- ADD EXPENSE -->
+<div class="card">
+<h2>Yangi Harajat Qo‘shish</h2>
+<input type="text" id="title" placeholder="Nomi">
+<input type="number" id="amount" placeholder="Summa">
+<input type="date" id="date">
+<select id="category">
+<option>Oziq-ovqat</option>
+<option>Transport</option>
+<option>O‘yin-kulgi</option>
+<option>Boshqa</option>
+</select>
+<button onclick="addExpense()">Qo‘shish</button>
+</div>
+
+<!-- FILTER -->
+<div class="card">
+<h2>📅 Sana bo‘yicha filter</h2>
+<input type="date" id="filterDate">
+<button onclick="filterByDate()">Filter</button>
+<button onclick="loadExpenses()">Reset</button>
+</div>
+
+<!-- STAT -->
+<div class="card">
+<h2>📊 Statistika</h2>
+<p>Umumiy: <span id="total">0</span> so‘m</p>
+<canvas id="chart"></canvas>
+</div>
+
+<!-- EXPENSE LIST -->
+<div class="card">
+<h2>📋 Harajatlar</h2>
+<div id="expenseList"></div>
+</div>
+
+<!-- TODO -->
+<div class="card">
+<h2>✅ ToDo List</h2>
+<input type="text" id="todoInput" placeholder="Vazifa yozing">
+<button onclick="addTodo()">Qo‘shish</button>
+<div id="todoList"></div>
+</div>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</htm
